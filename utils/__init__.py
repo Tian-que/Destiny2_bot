@@ -2,6 +2,22 @@ import aiohttp
 import os
 import requests
 
+
+async def download_bungie_img(figurl):
+    figdir = os.path.join(os.getcwd(), 'data', 'bungie_img', *figurl.split('/')[1:])
+
+    if not os.path.exists(os.path.dirname(figdir)):
+        os.makedirs(os.path.dirname(figdir))
+
+    if not os.path.exists(figdir):
+        async with aiohttp.ClientSession() as session:
+            response = await session.get('https://www.bungie.net' + figurl, verify_ssl=False)
+            content = await response.read()
+
+        with open(figdir, 'wb') as f:
+            f.write(content)
+    return figdir
+
 async def download_file(url: str, filename: str):
     figdir = os.path.dirname(filename)
     if not os.path.exists(figdir):

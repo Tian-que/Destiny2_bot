@@ -21,7 +21,7 @@ driver = nonebot.get_driver()
 driver.register_adapter("cqhttp", CQHTTPBot)
 
 #nonebot.load_builtin_plugins()
-nonebot.load_plugins("destiny2_bot/plugins")
+nonebot.load_plugins("plugins")
 nonebot.load_plugin("nonebot_plugin_test")
 nonebot.load_plugin("nonebot_plugin_apscheduler")
 

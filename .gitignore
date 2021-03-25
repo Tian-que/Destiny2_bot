@@ -128,7 +128,7 @@ dmypy.json
 
 # data
 data/player_info.json
-data/zh.sqllit3
+data/zh-chs.sqllit3
 data/world_sql_content.sqlite3
 data/bungie_img/*
 plugins/test.py
