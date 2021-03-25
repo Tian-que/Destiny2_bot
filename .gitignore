@@ -99,6 +99,7 @@ celerybeat-schedule
 
 # Environments
 .venv
+.env
 .env.dev
 .env.prod
 env/
@@ -125,13 +126,10 @@ dmypy.json
 # Pyre type checker
 .pyre/
 
-# nb2_data
-destiny2_bot/data/destiny2/player_info.json
-destiny2_bot/data/destiny2/zh.sqllit3
-destiny2_bot/data/destiny2/image/everyday_mod/*
-destiny2_bot/data/destiny2/image/mod/*
-destiny2_bot/data/destiny2/image/perks/*
-destiny2_bot/data/destiny2/image/signs/*
-destiny2_bot/data/destiny2/image/weapon_perk/*
-destiny2_bot/data/destiny2/image/weapons/*
-destiny2_bot/data/destiny2/image/weekly_report/*
+# data
+data/player_info.json
+data/zh.sqllit3
+data/world_sql_content.sqlite3
+data/bungie_img/*
+plugins/test.py
+plugins/weapons_perk.py
